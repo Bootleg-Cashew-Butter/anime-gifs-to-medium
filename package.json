@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "d": "npm run dev",
     "dev": "node dev-server.js",
-    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --recursive src/*.spec.js",
+    "t": "npm run test",
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require ./src/app/test/test-helper.js --recursive src/app/pods/**/*.spec.js",
+    "t:f": "npm run test:functional",
+    "test:functional": "NODE_ENV=test mocha --compilers js:babel-core/register ./src/app/test/**/*.spec.js",
+    "l": "npm run lint",
     "lint": "./node_modules/.bin/eslint ."
   },
   "repository": {
@@ -31,6 +36,7 @@
     "css-loader": "^0.23.1",
     "enzyme": "^2.3.0",
     "mocha": "^2.4.5",
+    "nightmare": "^2.4.0",
     "react-addons-test-utils": "^15.0.2",
     "react-transform-hmr": "^1.0.4",
     "sinon": "^1.17.4",

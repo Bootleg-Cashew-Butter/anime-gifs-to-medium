@@ -15,6 +15,9 @@ module.exports = {
     publicPath: '/dist/'
   },
   resolve: {
+    root: [
+      path.resolve(__dirname, './src')
+    ],
     extensions: ['', '.js']
   },
   devtool: 'eval-source-map',
@@ -22,6 +25,11 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
+  externals: {
+    'react/addons': true,
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true
+  },
   module: {
     loaders: [
       {

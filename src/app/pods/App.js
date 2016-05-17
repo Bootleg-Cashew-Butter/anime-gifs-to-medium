@@ -7,4 +7,8 @@ export default class App extends Component {
       {this.props.children}
     </div>
   }
+
+  componentDidMount() {
+    console.log(`I'm aliiiive`)
+  }
 }
