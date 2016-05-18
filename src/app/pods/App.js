@@ -8,7 +8,7 @@ export default class App extends Component {
     </div>
   }
 
-  componentDidMount() {
-    console.log(`I'm aliiiive`)
+  componentDidMount () {
+    console.log("I'm aliiiive")
   }
 }

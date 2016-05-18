@@ -1,10 +1,4 @@
-import {expect} from 'chai'
-import sinon from 'sinon'
-import {jsdom} from 'jsdom'
-
-global.expect = expect
-global.sinon = sinon
-
+import { jsdom } from 'jsdom'
 
 let exposedProperties = ['window', 'navigator', 'document']
 global.document = jsdom('')

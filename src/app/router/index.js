@@ -1,5 +1,5 @@
 import React from 'react'
-import {Router, Route, Link, IndexRoute, Redirect, useRouterHistory} from 'react-router'
+import { Router, Route, useRouterHistory } from 'react-router'
 import { createHashHistory } from 'history'
 
 import App from 'app/pods/App'

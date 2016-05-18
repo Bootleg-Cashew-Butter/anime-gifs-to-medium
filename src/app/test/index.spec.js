@@ -1,19 +1,18 @@
 import Nightmare from 'nightmare'
-import {expect} from 'chai'
-import sinon from 'sinon'
+import { expect } from 'chai'
+require('mocha-generators').install()
 
 describe('Start page', function () {
-  this.timeout(15000); // Set timeout to 15 seconds, instead of the original 2 seconds
-  var url = 'http://localhost:5050'
+  this.timeout(5000) // Set timeout to 15 seconds, instead of the original 2 seconds
+  var url = 'http://127.0.0.1:5050'
 
-  it('should show the app element', function (done) {
-    new Nightmare()
+  it('should show the app element', function * () {
+    const appLength = yield Nightmare()
       .goto(url)
-      .evaluate(function () {
+      .evaluate(() => {
         return document.querySelectorAll('#app').length
-      }, function (result) {
-        result.should.equal(1)
       })
-    .run(done)
+
+    expect(appLength).to.equal(1)
   })
 })

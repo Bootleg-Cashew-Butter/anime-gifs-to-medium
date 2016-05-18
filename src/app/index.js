@@ -6,6 +6,6 @@ import AppRouter from 'app/router'
 import 'app/theme/index.styl'
 
 render(
-  <AppRouter/>,
+  <AppRouter />,
   document.getElementById('app')
 )
