@@ -14,8 +14,8 @@
     "lint": "standard --verbose | snazzy",
     "sb": "npm run seatbelt",
     "seatbelt": "npm run l && npm run t && npm run t:a",
-    "precommit": "npm run l -s",
-    "prepush": "npm run sb -s"
+    "precommit": "npm run l",
+    "prepush": "npm run sb"
   },
   "standard": {
     "globals": [
